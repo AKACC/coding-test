@@ -1,0 +1,25 @@
+/* loading indicator styles */
+.loading-indicator-container {
+  justify-content: center;
+  align-items: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .loading-icon {
+      animation: App-logo-spin infinite 1s linear;
+      border: 5px solid #f3f3f3; /* Light grey */
+      border-top: 5px solid #000; /* Blue */
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+    }
+  }
+  
+  @keyframes loading-icon-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

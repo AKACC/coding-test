@@ -1,9 +1,14 @@
-var ListModel = require('../models/listModel');
+var ListLogic = require('../logics/listLogic');
 
 module.exports = {
-    getListByCategory: (req, res, next) => {
+    getCategoryList: (req, res, next) => {
         const {headers} = req;
-        const result = ListModel.getList({category:headers.category});
+        const result = ListLogic.getCategoryList();
+        res.json(result);
+    },
+    getImageListByCategory: (req, res, next) => {
+        const {body} = req;
+        const result = ListLogic.getImageList(body.categories);
         res.json(result);
     }
 
