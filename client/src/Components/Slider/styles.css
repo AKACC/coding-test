@@ -1,0 +1,23 @@
+/* slide styles */
+
+.slide-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+}
+
+.slider {
+    display:flex;
+    flex-direction: row;
+}
+
+
+.slide-image{
+    object-fit: cover;
+}
+.page-button-container{
+    position:absolute;
+    width:20vw;
+}
