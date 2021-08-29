@@ -10,7 +10,10 @@ export default function Slider({
 }){
     const [current, setCurrent] = useState(0);
     const length = images.length;
-  
+    
+    // change page button
+    // go to next page, once it reachs out to the last,
+    // then cycle back to the first page
     const nextSlide = () => {
       setCurrent(current === length - 1 ? 0 : current + 1);
     };

@@ -1,7 +1,13 @@
-
+/**
+ * Logic
+ * 
+ * 1. process data before fetching from Models
+ * 2. process raw data
+ */
 
 var ListModel = require('../models/listModel');
 
+// shuffle array random order
 function _shuffleArray(array){
     let j, x, i;
     for (i = array.length - 1; i > 0; i--) {

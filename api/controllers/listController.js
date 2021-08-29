@@ -1,5 +1,9 @@
 var ListLogic = require('../logics/listLogic');
-
+/**
+ * Controller
+ * 
+ * handling request and reponse
+ */
 module.exports = {
     getCategoryList: (req, res, next) => {
         const {headers} = req;

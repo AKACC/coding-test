@@ -1,3 +1,5 @@
+
+// example data
 module.exports = {
     'cats': [
         'https://founded.media/hiring/photos/cats/14157413946_fea785b4d6_k.jpg',
