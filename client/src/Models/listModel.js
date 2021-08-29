@@ -4,7 +4,6 @@ import {
 } from '../Constants/API'
 const axios = require('axios');
 
-
 export default  {
     getCategoryList(){
         let options = {
@@ -22,7 +21,7 @@ export default  {
         })
         .catch(function (error) {
             // handle error
-            console.log(error);
+            throw error;
         })
     },
     getImageList(categories){
@@ -44,7 +43,7 @@ export default  {
         })
         .catch(function (error) {
             // handle error
-            console.log(error);
+            throw error;
         })
     }
 

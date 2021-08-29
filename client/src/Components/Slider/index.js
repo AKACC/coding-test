@@ -1,13 +1,16 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './styles.css';
 import {
-    BiRightArrowCircle,
-    BiLeftArrowCircle,
-  } from "react-icons/bi";
+    FaChevronRight,
+    FaChevronLeft,
+  } from "react-icons/fa";
 import { IconContext } from "react-icons";
 export default function Slider({
     images = []
 }){
+    useEffect(()=>{
+        setCurrent(0)
+    },[images])
     const [current, setCurrent] = useState(0);
     const length = images.length;
     
@@ -17,11 +20,9 @@ export default function Slider({
     const nextSlide = () => {
       setCurrent(current === length - 1 ? 0 : current + 1);
     };
-  
     const prevSlide = () => {
       setCurrent(current === 0 ? length - 1 : current - 1);
     };
-
 
     return(
         <div className="slide-container">
@@ -57,7 +58,7 @@ function LeftArrow({
         <div className='page-button-container' style={{left:50}}>
             <IconContext.Provider value={{ color: "white",  size: '3em'}} >
                 <div>
-                    <BiLeftArrowCircle onClick={onClick}/>
+                    <FaChevronLeft onClick={onClick}/>
                 </div>
             </IconContext.Provider>
         </div>
@@ -71,7 +72,7 @@ function RightArrow({
         <div className='page-button-container' style={{right:50}}>
             <IconContext.Provider value={{ color: "white",  size: '3em'}} >
                 <div>
-                    <BiRightArrowCircle onClick={onClick}/>
+                    <FaChevronRight onClick={onClick}/>
                 </div>
             </IconContext.Provider>
         </div>

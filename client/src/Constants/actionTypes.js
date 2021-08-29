@@ -1,3 +1,9 @@
+
+/**
+ * Constants
+ * action types
+ * 
+ */
 module.exports ={
     GET_CATEGORY_LIST:'GET_CATEGORY_LIST',
     GET_CATEGORY_LIST_SUCCESS:'GET_CATEGORY_LIST_SUCCESS',

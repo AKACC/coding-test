@@ -1,6 +1,10 @@
 import * as types from '../Constants/actionTypes';
 import ListModel from '../Models/listModel';
 
+/** 
+ * List Actions
+ * 
+ */
 export default {
     getCategoryList(){
         return dispatch => {
@@ -17,6 +21,7 @@ export default {
                 .catch(e => {
                     dispatch({
                         type: types.GET_CATEGORY_LIST_FAILED,
+                        errorMessage: e.message
                     });
                 });
         };
@@ -36,6 +41,7 @@ export default {
                 .catch(e => {
                     dispatch({
                         type: types.GET_IMAGE_LIST_FAILED,
+                        errorMessage:  e.message
                     });
                 });
         };

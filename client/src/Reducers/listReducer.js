@@ -3,6 +3,7 @@ import * as types from '../Constants/actionTypes';
 let listState = {
     isLoading:false,
     actionType:'',
+    errorMessage:null,
     categoryList:[],
     imageList:[] 
 }
@@ -26,8 +27,10 @@ export default function listReducer(state = listState, action) {
             return{
                 ...state,
                 actionType:action.type,
-                isLoading:false
+                isLoading:false,
+                errorMessage: action.errorMessage
             }
+
         case types.GET_IMAGE_LIST:
             return{
                 ...state,
@@ -45,10 +48,10 @@ export default function listReducer(state = listState, action) {
             return{
                 ...state,
                 actionType:action.type,
-                isLoading:false
+                isLoading:false,
+                errorMessage: action.errorMessage
             }
     
-            
         default:
             return state;
     }
